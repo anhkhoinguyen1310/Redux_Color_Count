@@ -14,6 +14,7 @@ function rootReducer(state = initialState, action)
     if(action.type === "CHANGE_COLOR_OF_BOX_INDEX")
     {
         let color  = state.boxColors[action.idx]
+        console.log({color})
         const boxColors = state.boxColors
         boxColors[action.idx] = action.payload
         return{...state, boxColors}
